@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--[if IE 8]>    <html class="no-js ie8" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js {% if page.bg %}bg{% endif %}" lang="en">
+<!--<![endif]-->
+<head>
+
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <title>JS.ORG | STATS</title>
+   <meta name="description" content="Gathering statistics on JavaScript projects since 2015">
+   <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, target-densityDpi=device-dpi">
+   <!-- page generated {{ site.time | date_to_rfc822 }} -->
+   {% include icon.html %}
+   {% if page.dyn %}<!--[if lte IE 8]><meta http-equiv="refresh" content="0; url=http://stats.js.org/r.html" /><script type="text/javascript">window.location.href="http://stats.js.org/r.html"</script><style>body {display:none !important}</style><![endif]--><noscript><meta http-equiv="refresh" content="0;url=http://stats.js.org/r.html"></noscript>{% else %}{% include ie8.html %}{% endif %}
+   {% include style.html %}
+   <script>var doc = document.documentElement; doc.className = doc.className.replace("no-js", "");</script>
+   
+</head>
+<body>
+   {% include header.html %}
+   {{ content }}
+   {% include footer.html %}
+   <link href="css/stats.css" rel="stylesheet"/>
+   <script src="js/{% if page.dyn %}main{% else %}tbl{% endif %}.js"></script>
+   <script>
+      {% if page.ghstars %}{% include ghstars.html %}{% endif %}
+      var _paq = _paq || [];_paq.push(["setDocumentTitle", document.domain + "/" + document.title]);_paq.push(["setCookieDomain", "*.js.org"]);_paq.push(['trackPageView']);_paq.push(['enableLinkTracking']);(function() {var u="//piwik.js.org/";_paq.push(['setTrackerUrl', u+'piwik.php']);_paq.push(['setSiteId', 2]);var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);})();
+   </script>
+   <noscript><p><img src="//piwik.js.org/piwik.php?idsite=2" style="border:0;" alt="" /></p></noscript>
+</body>
+</html>

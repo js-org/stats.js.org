@@ -1,0 +1,36 @@
+---
+layout: default
+sort: 'r'
+reverse: false
+num: 0
+times: 100
+claim: Gathering statistics on JavaScript projects since 2015
+ghstars: stats.js.org
+bg: true
+dyn: true
+---
+<p class="bigger">The table shows statistics and a ranking of the <strong>10k</strong> most popular JavaScript projects on GitHub. The normalized values are calculated by the given number of <strong>stars and forks</strong> of a project.</p>
+   <p>This page was <strong>generated <span id="gen">{{ site.time }}</span></strong> and will be recreated by a cron job three times a day with the most recent data (also available for download as <a href="10kJS.json" title="10kJS.json" rel="nofollow" target="_blank">JSON</a> or <a href="10kJS.csv" title="10kJS.csv" rel="nofollow" target="_blank">CSV</a>).<br>You can use the column headers to sort the table and toggle the display of changes in the ranking for a particular timeframe. And if you are looking for a certain project you can just use the search form.</p>
+   <p><strong>Important:</strong> This is not a usage-statistic and does not necessarily reflect what you will find in the wild. And keep in mind that the first column shows an "eternal rank" - focus on <strong>DAY</strong>, <strong>WEEK</strong>, and <strong>MONTH</strong> if you want to see what is trending!</p>
+   <input id="iP" class="switch btf" type="radio" name="delta" />
+   <input id="iD" class="switch btf" type="radio" name="delta" />
+   <input id="iW" class="switch btf" type="radio" name="delta" />
+   <input id="iM" class="switch btf" type="radio" name="delta" />
+   <table id="tbl" class="btf">
+      <thead>
+         <tr class="static">
+            <th id="thR"><a href="./r_.html#tbl" title="▼ RANK" class="active">RANK</a></th>
+            <th id="thN"><div>NAME<label for="iP"></label></div></th>
+            <th id="thD"><a href="./d.html#tbl" title="▼ DAY">DAY<label for="iD"></label></a></th>
+            <th id="thW"><a href="./w.html#tbl" title="▼ WEEK">WEEK<label for="iW"></label></a></th>
+            <th id="thM"><a href="./m.html#tbl" title="▼ MONTH">MONTH<label for="iM"></label></a></th>
+         </tr>
+      </thead>
+      <tfoot>
+         <tr id="tfoot" class="afix">
+            <td colspan="5"><table><tr id="pas"></tr></table></td>
+         </tr>
+         <tr class="static"><td colspan="5"></td></tr>
+      </tfoot>
+      {% include tbody.html %}
+   </table>

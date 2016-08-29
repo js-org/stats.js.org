@@ -1,0 +1,3 @@
+---
+---
+{% assign recs = site.data.recs %}[{% for r in recs | limit:9900 offset:100 %}{% if forloop.index0 > 0 %},{% endif %}[{{ r.id }},{{ r.r | plus:0 }},{{ r.p }},{{ r.d }},{{ r.w }},{{ r.m }},{{ r.rd  | plus:0 }},{{ r.rw  | plus:0 }},{{ r.rm  | plus:0 }},{{ r.dd }},{{ r.dw }},{{ r.dm }},"{{r.n}}",{% if r.u %}"{{r.u}}"{% else %}null{% endif %},{% if r.i %}"{{r.i}}"{% else %}null{% endif %}]{% endfor %}]

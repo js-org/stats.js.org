@@ -1,0 +1,25 @@
+---
+layout: default
+sort: 'rd'
+reverse: true
+num: 0
+claim: Gathering statistics on JavaScript projects since 2015
+ghstars: stats.js.org
+bg: true
+---
+<input id="iP" class="switch btf" type="radio" name="delta" />
+   <input id="iD" class="switch btf" type="radio" name="delta" />
+   <input id="iW" class="switch btf" type="radio" name="delta" />
+   <input id="iM" class="switch btf" type="radio" name="delta" />
+   <table id="tbl" class="btf">
+      <thead>
+         <tr class="static">
+            <th id="thR"><a href="./r.html#tbl" title="▲ RANK">RANK</a></th>
+            <th id="thN"><div>NAME<label for="iP"></label></div></th>
+            <th id="thD"><a href="./d.html#tbl" title="▼ DAY" class="active">DAY<label for="iD"></label></a></th>
+            <th id="thW"><a href="./w.html#tbl" title="▼ WEEK">WEEK<label for="iW"></label></a></th>
+            <th id="thM"><a href="./m.html#tbl" title="▼ MONTH">MONTH<label for="iM"></label></a></th>
+         </tr>
+      </thead>
+      {% include tbody.html %}
+   </table>

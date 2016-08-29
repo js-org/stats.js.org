@@ -1,0 +1,4 @@
+---
+---
+{% assign recs = site.data.recs %}id,rank,points,day,week,month,rankday,rankweek,rankmonth,deltaday,deltaweek,deltamonth,name,url,description{% for r in recs | limit: 10000 %}
+{{r.id}},{{r.r}},{{r.p}},{{r.d}},{{r.w}},{{r.m}},{{r.rd}},{{r.rw}},{{r.rm}},{{r.dd}},{{r.dw}},{{r.dm}},{{r.n}},{{r.u}},{{r.i}}{% endfor %}
