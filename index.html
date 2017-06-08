@@ -10,7 +10,15 @@ bg: true
 dyn: true
 ---
 <p class="bigger">The table shows statistics and a ranking of the <strong>10k</strong> most popular JavaScript projects on GitHub. The normalized values are calculated by the given number of <strong>stars and forks</strong> of a project.</p>
-   <p>This page was <strong>generated <span id="gen">{{ site.time }}</span></strong> and will be recreated by a cron job three times a day with the most recent data (also available for download as <a href="10kJS.json" title="10kJS.json" rel="nofollow" target="_blank">JSON</a> or <a href="10kJS.csv" title="10kJS.csv" rel="nofollow" target="_blank">CSV</a>).<br>You can use the column headers to sort the table and toggle the display of changes in the ranking for a particular timeframe. And if you are looking for a certain project you can just use the search form.</p>
+
+<style>
+#ad {position: relative;margin-bottom: 20px;display: block;}
+#ad img {max-width: 100%;}
+#ad label {font-size: 10px;position: absolute;font-weight: 700;bottom:-10px;right:5px;}
+</style>
+<a id="ad" href="https://javascript-conference.com/?utm_source=jsnews&amp;utm_medium=banner&amp;utm_campaign=mediapartner" title="International JavaScript Conference" target="_blank" rel="nofollow"> <img src="https://js.org/img/IJS_2017_Banner_970x90_41212_infinite.gif" alt="International JavaScript Conference; October 23-27 2017, Munich"><label>Advertisement</label></a>
+
+<p>This page was <strong>generated <span id="gen">{{ site.time }}</span></strong> and will be recreated by a cron job three times a day with the most recent data (also available for download as <a href="10kJS.json" title="10kJS.json" rel="nofollow" target="_blank">JSON</a> or <a href="10kJS.csv" title="10kJS.csv" rel="nofollow" target="_blank">CSV</a>).<br>You can use the column headers to sort the table and toggle the display of changes in the ranking for a particular timeframe. And if you are looking for a certain project you can just use the search form.</p>
    <p><strong>Important:</strong> This is not a usage-statistic and does not necessarily reflect what you will find in the wild. And keep in mind that the first column shows an "eternal rank" - focus on <strong>DAY</strong>, <strong>WEEK</strong>, and <strong>MONTH</strong> if you want to see what is trending!</p>
    <h2 style="text-align:center">This service is not active in the moment.<br>Have a look at <a href="http://bestof.js.org/" rel="nofollow">bestof.js.org</a> instead.</h2>
    <input id="iP" class="switch btf" type="radio" name="delta" />
